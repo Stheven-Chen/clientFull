@@ -8,7 +8,7 @@ const App: React.FC = () =>{
   return(
     <Router>
       <Routes>
-        <Route path='/:uuid' element={<Suspense fallback={<Overlay text='loading'/>}><Home/></Suspense>}/>
+        <Route path='/' element={<Suspense fallback={<Overlay text='loading'/>}><Home/></Suspense>}/>
       </Routes>
     </Router>
   );

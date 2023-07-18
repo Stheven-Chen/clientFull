@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Nav from '../component/nav';
 import {State} from '../component/state';
-import {useParams} from 'react-router-dom';
+import {useSearchParams} from 'react-router-dom';
 import Modal from '../component/modal'
 
 
@@ -48,7 +48,8 @@ const Home: React.FC = () => {
     _id:undefined
   });
 
-  const {uuid} = useParams<{uuid:string}>();
+  const [searchParams] = useSearchParams();
+  const uuid = searchParams.get('uuid');
   console.log(uuid)
 
   const pendidikan = [
