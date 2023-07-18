@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { useState } from 'react';
 import Nav from '../component/nav';
 import {State} from '../component/state';
@@ -121,7 +122,7 @@ const Home: React.FC = () => {
     }
   
     // const res = await fetch(`http://localhost:3001/client/${uuid}`, {
-    const res = await fetch(`htpps://rekrutserver.stheven.website/client/${uuid}`, {
+    const res = await fetch(`https://rekrutserver.stheven.website/client/${uuid}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -171,7 +172,6 @@ const Home: React.FC = () => {
         />
       )}
       <div className="container mx-auto px-4 py-8">
-        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
           {/* Section: Data Diri */}
           <div className="mb-6">
